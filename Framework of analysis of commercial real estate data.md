@@ -10,6 +10,11 @@ Guide businesses to start/build a business in an appropriate region based on mul
 
 Methods
 -
+
+Datapipeline
+1. Remove NA from data files.
+2. 
+
 Results
 -
 Construction company
