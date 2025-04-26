@@ -6,13 +6,7 @@ leases_df = pd.read_csv("../data/Leases.csv")
 # leases_df = pd.DataFrame(leases_df, columns=["company_name"]).dropna()
 
 # Omit rows with na company_name
-leases_df = leases_df[leases_df["company_name"].notna()]
-
-# Drop na rows for company name
-# leases_df = pd.DataFrame(leases_df, columns=["company_name"]).dropna()
-
-# Omit rows with na company_name
-leases_df = leases_df[leases_df["company_name"].notna()]
+# leases_df = leases_df[leases_df["company_name"].notna()]
 
 # Remove columns with all na entries
 remove_features = [
@@ -23,18 +17,20 @@ remove_features = [
     "sublet_availability_proportion",
     "sublet_internal_class_rent",
     "sublet_overall_rent",
-    "leasing",
-    "space_type",
-    "RBA"
+    "company_name",
 ]
 for feature in remove_features:
     leases_df = leases_df[leases_df[feature].notna()]
 
-# Export
-leases_df.to_csv("../data/cleaned_leases.csv", index=False)
 
-# Extract RBA
 leases_by_rba = leases_df["RBA"]
 leases_by_rba.head()
 
 leases_by_rba.to_csv("../data/leases_by_rba.csv")
+
+# Drop RBA and space_type
+leases_df = leases_df.drop(columns=[
+    "RBA", "space_type", "leasing", "monthsigned", "building_name", "building_id", "address", "region", "city"
+], axis=1)
+
+leases_by_rba.to_csv("./data/leases_by_rba.csv")
