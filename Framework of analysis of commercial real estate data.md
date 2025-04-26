@@ -12,6 +12,9 @@ Guide businesses to start/build a business in an appropriate region based on mul
 Methods
 -
 
+Census data
+https://www.census.gov/quickfacts/fact/table/TX/PST045224
+
 Datapipeline
 1. Remove NA from data files.
 2. 
