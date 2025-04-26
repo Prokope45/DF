@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO_URL="https://github.com/Prokope45/DF.git"
+REPO_URL="git@github.com:Prokope45/DF.git"
 
 # Initialize git repository if not already initialized
 if [ ! -d ".git" ]; then
@@ -14,7 +14,7 @@ git remote add origin $REPO_URL
 echo "Added remote repository: $REPO_URL"
 
 # Add all files in the current directory
-git add /Users/pengchen/Documents/DataFest_2025/tech_hub_analysis.py
+git add "/Users/pengchen/Documents/DataFest_2025/tech_hub_analysis.py"
 echo "Added all files to staging area"
 
 # Prompt for commit message
