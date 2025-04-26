@@ -11,6 +11,7 @@
 
 
 ## Challenge
+We are working for Novacoast to determine the best location to move headquarters.
 
 
 **NOTE:** `Price and Availability Data` data set is already merged into leases.
